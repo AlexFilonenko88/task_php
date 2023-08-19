@@ -10,3 +10,9 @@
 метод get, передаваемые данные видный в адресной строке
 метод post используеться для передачи личной, конфедициально инф
 метод get используеться для передачи не важной инф, не требующей защиты
+
+4. 
+- 1 - подключние к бд ($pdo = new PDO ("mysql:host=localhost;dbname=test", "root", "password");)
+- 2 - формирование запроса $sql = "INSERT INTO test (name_string) VALUES (:name_string)";
+- 3 - подготовка запроса $statement = $pdo -> prepare($sql);
+- 4 - выполнение запроса $statment->execute(['name_string' => $name_string]);
